@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ace Editor Example</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-color: #F5EEE6;
+            /* Set the body background color to F5EEE6 */
+        }
+        
+        h1 {
+            color: #E6A4B4;
+            /* Set the h1 text color to E6A4B4 */
+        }
+        
+        .logo {
+            background-color: #F3D7CA;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <h1 class="text-center">การเปรียบเทียบการประมวลผลของการรันโค้ด</h1>
+            <div class="text-center">
+                <span><a href="index.html">หน้าแรก</a></span>
+                <span><a href="c.html">ภาษา c++</a></span>
+                <span><a href="csharp.html">ภาษา c#</a></span>
+                <span><a href="java.html">ภาษา java</a></span>
+                <span><a href="python.html">ภาษา python</a></span>
+            </div>
+        </div>
+        <div class="row logo">
+            <div class="col">
+                <img class="rounded mx-auto d-block" height="200px" width="150px" src="logo.gif" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <iframe frameBorder="0" height="1024px" src="https://onecompiler.com/embed/cpp/3zzukk667?hideLanguageSelection=true&hideNew=true&hideNewFileOption=true" width="100%"></iframe>
+            </div>
+            <div class="col-6">
+
+                <pre>
+        โปรแกรม C++ ที่ให้มานี้มีลักษณะเป็นคลาส MatrixOperations ที่มีฟังก์ชันต่าง ๆ 
+        สำหรับการดำเนินการกับเมทริกซ์ และฟังก์ชัน main ที่ใช้เพื่อทดสอบฟังก์ชันเหล่านั้น ๆ 
+        และวัดเวลาที่ใช้ในการทำงาน:
+        1.addMatrices(const std::vector<std::vector<int>>& matrixA, 
+            const std::vector<std::vector<int>>& matrixB):
+            •	รับเมทริกซ์ matrixA และ matrixB เป็นพารามิเตอร์แบบค่าอ้างอิง
+            •	ทำการบวกเมทริกซ์ matrixA และ matrixB และคืนผลลัพธ์
+        2.transposeMatrix(const std::vector<std::vector<int>>& matrix):
+            •	รับเมทริกซ์ matrix แบบค่าอ้างอิง
+            •	ทำการคำนวณและคืนเมทริกซ์ทรานสโพสของ matrix
+        3.determinant(const std::vector<std::vector<double>>& matrix):
+            •	รับเมทริกซ์ matrix แบบค่าอ้างอิง
+            •	คำนวณและคืนค่าดีเทอร์มิแนนท์ของเมทริกซ์ที่มีประกอบด้วยตัวเลขทศนิยม
+        4.getSubmatrix(const std::vector<std::vector<double>>& matrix, int row, int col):
+            •	รับเมทริกซ์ matrix, และตำแหน่ง row และ col
+            •	คืนเมทริกซ์ย่อยที่ได้จากการลบแถวและคอลัมน์ที่ระบุออกจาก matrix
+        5.inverseMatrix(const std::vector<std::vector<int>>& matrix):
+            •	รับเมทริกซ์ matrix แบบค่าอ้างอิง
+            •	ทำการตรวจสอบว่าเมทริกซ์เป็นสี่เหลี่ยมหรือไม่
+            •	แปลงเมทริกซ์จำนวนเต็มเป็นเมทริกซ์ทศนิยม
+            •	ตรวจสอบว่าดีเทอร์มิแนนท์ไม่เป็นศูนย์
+            •	คำนวณเมทริกซ์แอดจูเกทและนำมันมาใช้ในการคำนวณเมทริกซ์ผกผัน
+            •	แปลงเมทริกซ์ผกผันจำนวนทศนิยมกลับเป็นเมทริกซ์จำนวนเต็ม
+        6.printMatrix(const std::vector<std::vector<int>>& matrix) 
+            และ printMatrix(const std::vector<std::vector<double>>& matrix):
+            •	รับเมทริกซ์ matrix แบบค่าอ้างอิง
+            •	พิมพ์ค่าของเมทริกซ์นี้ออกทางคอนโซล
+        7.main():
+            •	กำหนดค่าให้กับเมทริกซ์ matrixA, matrixB, และ matrixC
+            •	พิมพ์เมทริกซ์ต้นฉบับ
+            •	ทำการดำเนินการต่าง ๆ บนเมทริกซ์ (การบวก, การทรานสโพส, และการผกผัน)
+            •	รวมถึงการจัดการข้อผิดพลาดกรณีที่เมทริกซ์ไม่ใช่สี่เหลี่ยมหรือไม่สามารถผกผันได้
+            •	วัดและพิมพ์ระยะเวลาที่ใช้ในการทำงาน
+                    
+                </pre>
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Your JavaScript to initialize Ace Editor and the runCode function -->
+    <script>
+        // Initialize Ace Editor
+        var editor = ace.edit("editor");
+        editor.getSession().setMode("ace/mode/csharp");
+    </script>
+</body>
+
+</html>

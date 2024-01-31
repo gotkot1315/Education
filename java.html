@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ace Editor Example</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-color: #F5EEE6;
+            /* Set the body background color to F5EEE6 */
+        }
+        
+        h1 {
+            color: #E6A4B4;
+            /* Set the h1 text color to E6A4B4 */
+        }
+        
+        .logo {
+            background-color: #F3D7CA;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <h1 class="text-center">การเปรียบเทียบการประมวลผลของการรันโค้ด</h1>
+            <div class="text-center">
+                <span><a href="index.html">หน้าแรก</a></span>
+                <span><a href="c.html">ภาษา c++</a></span>
+                <span><a href="csharp.html">ภาษา c#</a></span>
+                <span><a href="java.html">ภาษา java</a></span>
+                <span><a href="python.html">ภาษา python</a></span>
+            </div>
+        </div>
+        <div class="row logo">
+            <div class="col">
+                <img class="rounded mx-auto d-block" height="200px" width="150px" src="logo.gif" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <iframe frameBorder="0" height="1024px" src="https://onecompiler.com/embed/java/3zzuk6k4y?hideLanguageSelection=true&hideNew=true&hideNewFileOption=true" width="100%"></iframe>
+            </div>
+            <div class="col-6">
+
+                <pre>
+        โปรแกรม Java ที่ให้มามีฟังก์ชันต่าง ๆ ดังนี้:
+        1.addMatrices(int[][] matrixA, int[][] matrixB):
+            •	รับเมทริกซ์สองตัวเป็นอินทีเจอร์ และทำการบวกกันตำแหน่งที่เหมือนกันของเมทริกซ์ทั้งสอง
+            •	สร้างและคืนเมทริกซ์ใหม่ที่เกิดจากการบวกนี้
+        2.transposeMatrix(int[][] matrix):
+            •	รับเมทริกซ์เป็นอินทีเจอร์ และทำการคำนวณและคืนเมทริกซ์ทรานสโพสของเมทริกซ์นั้น
+            •	การทรานสโพสของเมทริกซ์ได้จากการสลับแถวกับคอลัมน์
+        3.determinant(double[][] matrix):
+            •	คำนวณและคืนค่าดีเทอร์มิแนนท์ของเมทริกซ์ที่เป็นสี่เหลี่ยมจัตุรัส
+            •	ใช้การเข้าถึงโดยทฤษฎีบทการขยายคณะกำลังในการคำนวณดีเทอร์มิแนนท์
+        4.getSubmatrix(double[][] matrix, int row, int col):
+            •	คืนเมทริกซ์ย่อยที่ได้จากการลบแถวและคอลัมน์ที่ระบุออกจากเมทริกซ์ที่ให้มา
+            •	ใช้ในการคำนวณดีเทอร์มิแนนท์เพื่อให้ได้คอ-แฟคเตอร์
+        5.inverseMatrix(int[][] matrix):
+            •	คำนวณเมทริกซ์ผกผันของเมทริกซ์ที่เป็นสี่เหลี่ยมจัตุรัส
+            •	ตรวจสอบว่าเมทริกซ์เป็นสี่เหลี่ยมหรือไม่
+            •	แปลงเมทริกซ์จำนวนเต็มเป็นเมทริกซ์ทศนิยม
+            •	ตรวจสอบว่าดีเทอร์มิแนนท์ไม่เป็นศูนย์
+            •	คำนวณเมทริกซ์แอดจูเกทและนำมันมาใช้ในการคำนวณเมทริกซ์ผกผัน
+            •	แปลงเมทริกซ์ผกผันจำนวนทศนิยมกลับเป็นเมทริกซ์จำนวนเต็ม
+        6.printMatrix(int[][] matrix) และ printMatrix(double[][] matrix):
+            •	พิมพ์ค่าของเมทริกซ์ 2 มิติลงในคอนโซล
+        7.main(String[] args):
+            •	เมธอด main ใช้เพื่อทดสอบฟังก์ชันต่าง ๆ ในโปรแกรม
+            •	กำหนดค่าเริ่มต้นให้กับเมทริกซ์ 3 ตัว (matrixA, matrixB, และ matrixC)
+            •	พิมพ์เมทริกซ์ต้นฉบับ
+            •	ทำการดำเนินการต่าง ๆ บนเมทริกซ์ (การบวก, การทรานสโพส, และการผกผัน)
+            •	พิมพ์ผลลัพธ์
+            •	รวมถึงการจัดการข้อผิดพลาดกรณีที่เมทริกซ์ไม่ใช่สี่เหลี่ยมหรือไม่สามารถผกผันได้
+            •	จำนวนเวลาที่ใช้ในการดำเนินการถูกวัดด้วย System.currentTimeMillis()
+                    
+                </pre>
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Your JavaScript to initialize Ace Editor and the runCode function -->
+    <script>
+        // Initialize Ace Editor
+        var editor = ace.edit("editor");
+        editor.getSession().setMode("ace/mode/csharp");
+    </script>
+</body>
+
+</html>

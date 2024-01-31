@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ace Editor Example</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-color: #F5EEE6;
+            /* Set the body background color to F5EEE6 */
+        }
+        
+        h1 {
+            color: #E6A4B4;
+            /* Set the h1 text color to E6A4B4 */
+        }
+        
+        .logo {
+            background-color: #F3D7CA;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <h1 class="text-center">การเปรียบเทียบการประมวลผลของการรันโค้ด</h1>
+            <div class="text-center">
+                <span><a href="index.html">หน้าแรก</a></span>
+                <span><a href="c.html">ภาษา c++</a></span>
+                <span><a href="csharp.html">ภาษา c#</a></span>
+                <span><a href="java.html">ภาษา java</a></span>
+                <span><a href="python.html">ภาษา python</a></span>
+            </div>
+        </div>
+        <div class="row logo">
+            <div class="col">
+                <img class="rounded mx-auto d-block" height="200px" width="150px" src="logo.gif" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <iframe frameBorder="0" height="1024px" src="https://onecompiler.com/embed/python/3zzsg7pzb?hideLanguageSelection=true&hideNew=true&hideNewFileOption=true" width="100%"></iframe>
+            </div>
+            <div class="col-6">
+
+                <pre>
+        โปรแกรม Python ที่ให้มานั้นมีลักษณะเป็นภาษาที่ใช้ไลบรารี NumPy สำหรับการดำเนินการกับเมทริกซ์ 
+        โดยมีฟังก์ชันต่าง ๆ ดังนี้: 
+        1. add_matrices(matrixA, matrixB): 
+            • รับเมทริกซ์ matrixA และ matrixB เข้ามา 
+            • ใช้ฟังก์ชัน np.add() ใน NumPy เพื่อทำการบวกเมทริกซ์
+            • คืนเมทริกซ์ผลลัพธ์ 
+        2. transpose_matrix(matrix): 
+            • รับเมทริกซ์ matrix เข้ามา 
+            • ใช้ฟังก์ชัน np.transpose() ใน NumPy เพื่อทำการคำนวณและคืนเมทริกซ์ทรานสโพส 
+            • คือการสลับแถวกับคอลัมน์ของเมทริกซ์ 
+        3. determinant(matrix): 
+            • รับเมทริกซ์ matrix เข้ามา 
+            • ใช้ฟังก์ชัน np.linalg.det() ใน NumPy เพื่อคำนวณดีเทอร์มิแนนท์ของเมทริกซ์ 
+        4. get_submatrix(matrix, row, col): 
+            • รับเมทริกซ์ matrix และตำแหน่ง row และ col เข้ามา 
+            • ใช้ np.delete() ใน NumPy เพื่อลบแถวและคอลัมน์ที่กำหนดออกจากเมทริกซ์
+            • คืนเมทริกซ์ย่อยที่ได้ 
+        5. inverse_matrix(matrix): 
+            • รับเมทริกซ์ matrix เข้ามา 
+            • คำนวณดีเทอร์มิแนนท์ของเมทริกซ์และตรวจสอบว่ามันไม่เป็นศูนย์ 
+            • คำนวณเมทริกซ์ผกผันโดยใช้คอ-แฟคเตอร์และนำมันมาคูณด้วยค่าที่เป็นผกผัน 
+            • คืนเมทริกซ์ผกผัน 
+        6. print_matrix(matrix):
+            • รับเมทริกซ์ matrix และพิมพ์ค่าของเมทริกซ์นี้ออกทางคอนโซล 
+        7. main(): 
+            • กำหนดค่าให้กับเมทริกซ์ matrixA, matrixB, และ matrixC 
+            • พิมพ์เมทริกซ์ต้นฉบับ 
+            • ทำการดำเนินการต่าง ๆ บนเมทริกซ์ (การบวก, การทรานสโพส, และการผกผัน) 
+            • รวมถึงการจัดการข้อผิดพลาดกรณีที่เมทริกซ์ไม่ใช่สี่เหลี่ยมหรือไม่สามารถผกผันได้
+            • จัดเก็บเวลาเริ่มต้นและสิ้นสุดการทำงานเพื่อวัดระยะเวลาที่ใช้ 
+            • พิมพ์ผลลัพธ์และระยะเวลาที่ใช้ในการทำงาน โดยทั้งหมดนี้ใช้ไลบรารี NumPy 
+            เพื่อทำให้การดำเนินการกับเมทริกซ์มีประสิทธิภาพและสะดวกมากขึ้นใน Python.
+                </pre>
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Your JavaScript to initialize Ace Editor and the runCode function -->
+    <script>
+        // Initialize Ace Editor
+        var editor = ace.edit("editor");
+        editor.getSession().setMode("ace/mode/csharp");
+    </script>
+</body>
+
+</html>
